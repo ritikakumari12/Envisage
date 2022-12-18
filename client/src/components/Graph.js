@@ -29,12 +29,12 @@ export default function Graph(){
               <div className='chart relative'>
                 <Doughnut {...config}></Doughnut>
                     <h3 className='mb-4 font-bold title'>Total
-                    <span className='block text-3xl text-emerald 400'>₹{0}</span>
+                    <span className='block text-3xl text-emerald-400'>₹{0}</span>
                     </h3>
                 
                 </div>  
 
-                <div className='flex flex=col py-10 gap-4'>
+                <div className='flex flex-col py-10 gap-4'>
                  <Labels></Labels>
                 </div> 
             </div>
