@@ -50,7 +50,7 @@ async function get_Transaction(req,res){
 //delete: http://localhost:8080/api/transaction
 async function delete_Transaction(req,res){
    if(!req.body) res.status(400).json({mesage:"Request body not Found"});
-   await model.Transaction.deleteOne(req,body,function(err){
+   await model.Transaction.deleteOne(req.body,function(err){
     if(!err) res.json("Record Deleted....!");
    }).clone().catch(function(err){res.json("Error while deleting Transaction Record")}); 
 }
