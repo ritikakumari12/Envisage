@@ -1,22 +1,29 @@
-import './App.css';
-import Graph from './components/Graph';
-import Form from './components/Form';
-
+import React from 'react';
+// import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import Home from './pages';
+import About from './pages/about';
+import Blogs from './pages/blogs';
+import SignUp from './pages/signup';
+import Contact from './pages/contact';
+import Expense from './pages/Expense';
+  
 function App() {
-  return (
-    <div className='App'>
-    <div className="container mx-auto max-w-6xl text-center drop-shadow-lg text-gray-800">
-      <h1 className="text-4xl py-8 mb-10 bg-slate-800 text-white rounded">Envisage</h1>
-      {/* grid columns */}
-      <div className="grid md:grid-cols-2 gap-4">
-          {/* Chart */}
-          <Graph></Graph>
-          {/* Form */}
-          <Form></Form>
-      </div>
-      </div>
-      </div>
-  );
+return (
+    <Router>
+    <Navbar />
+    <Routes>
+        <Route exact path='/' exact element={<Home/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/blogs' element={<Blogs/>} />
+        <Route path='/sign-up' element={<SignUp/>} />
+        <Route path='/Expense' element={<Expense/>} />
+    </Routes>
+    </Router>
+);
 }
-
+  
 export default App;
