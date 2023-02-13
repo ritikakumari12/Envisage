@@ -12,7 +12,7 @@ $ git clone -branch master https://github.com/ritikakumari12/Envisage
 #### Cd into Server Folder and Start the Server First. ( make sure you install all node modules using 
 ```npm install ```)
 #### Cd into Client Folder and Start the React Development Server. ( make sure you install all node modules using 
-``npm install```)
+```npm install```)
 
 ## Working
 After running app.js, open http://localhost:8080/ on your PC.
